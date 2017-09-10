@@ -73,11 +73,11 @@
 			var trimed = _this.email.value.trim();
 			if (trimed.length === 0) {
                 _this.emailFlagOk = false;
-				_this.addErrorMessange('Поле обьязательно к заполнению', _this.email);
+				_this.addErrorMessange('Field required', _this.email);
 			}
 			else if (!reg.test(trimed)) {
 				_this.emailFlagOk = false;
-				_this.addErrorMessange('Неверный формат', this.email);
+				_this.addErrorMessange('Wrong Format', this.email);
 			}
 			else {
                 // check if email is used:
@@ -97,7 +97,7 @@
         if (answer.used === true) {
             this.emailFlagOk = false;
             this.emailUsed = false;
-            this.addErrorMessange('Такой пользователь уже зарегистрирован', this.email);
+            this.addErrorMessange('User is already exists', this.email);
             this.enableOrDesableSubmit();
         } else {
             this.emailUsed = true;
@@ -128,19 +128,19 @@
 			var trimed = _this.password.value.trim();
 			if (trimed.length === 0) {
 				_this.passFlag = false;
-				_this.addErrorMessange('Поле обьязательно к заполнению' , _this.password);
+				_this.addErrorMessange('Field required' , _this.password);
 			}
 			else if (!regSimbolsAllowed.test(trimed)) {
 				_this.passFlag = false;
-				_this.addErrorMessange('Пароль содержит запрещенные символы. Разрешены a-z A-Z 0-9 _ -' , _this.password);
+				_this.addErrorMessange('Password contains forbidden characters. Allowed: a-z A-Z 0-9 _ -' , _this.password);
 			}
 			else if (trimed.length <= 5) {
 				_this.passFlag = false;
-				_this.addErrorMessange('Пароль должен быть длинее 5ти символов', _this.password);
+				_this.addErrorMessange('Password should be longer than 5 characters', _this.password);
 			}
 			else if (!regVerySimple.test(trimed)) {
 				_this.passFlag = false;
-				_this.addErrorMessange('Слишком просто. Пароль должен содержать другие символы кроме a-z A-Z 0-9', _this.password);
+				_this.addErrorMessange('Weak password. Password should contain characters other than a-z A-Z 0-9', _this.password);
 			}
 			else {
 				_this.passFlag = true;
@@ -168,7 +168,7 @@
 			}
 			else if (!regPhone.test(trimed)) {
 				_this.phoneFlag = false;
-				_this.addErrorMessange('Не соответсвует международному форматиу +380 ХХ ХХ ХХ ХХХ' , _this.phone);
+				_this.addErrorMessange('Telephone number should be in format of: +380 ХХ ХХ ХХ ХХХ' , _this.phone);
 			}
 			else {
 				_this.phoneFlag = true;
