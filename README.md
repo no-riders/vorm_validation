@@ -19,4 +19,5 @@ Common errors:
 - Box hasn't been ticked;
 
 Server side validation: email request to be sent to https://aqueous-reaches-8130.herokuapp.com51
+
 No jQuery, no synchronous requests.
